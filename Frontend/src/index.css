@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html.dark body {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+html.dark [class*="bg-white"] {
+  background-color: #0f172a !important;
+}
+
+html.dark [class*="bg-slate-50"] {
+  background-color: #020617 !important;
+}
+
+html.dark [class*="bg-slate-100"] {
+  background-color: #1e293b !important;
+}
+
+html.dark [class*="text-slate-900"] {
+  color: #f8fafc !important;
+}
+
+html.dark [class*="text-slate-800"] {
+  color: #f1f5f9 !important;
+}
+
+html.dark [class*="text-slate-700"] {
+  color: #e2e8f0 !important;
+}
+
+html.dark [class*="text-slate-600"] {
+  color: #cbd5e1 !important;
+}
+
+html.dark [class*="text-slate-500"] {
+  color: #94a3b8 !important;
+}
+
+html.dark [class*="border-slate-200"] {
+  border-color: #334155 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b;
+}
+
+/* =========================================
+   ACCESSIBILITY: LARGER TEXT
+========================================= */
+
+html.large-text {
+  font-size: 112%;
+}
+
+/* =========================================
+   ACCESSIBILITY: HIGH CONTRAST
+========================================= */
+
+html.high-contrast body {
+  background: #000;
+  color: #fff;
+}
+
+html.high-contrast button,
+html.high-contrast input,
+html.high-contrast select,
+html.high-contrast textarea {
+  border-width: 2px;
+}
+
+html.high-contrast a {
+  text-decoration: underline;
+}
+
+/* =========================================
+   ACCESSIBILITY: REDUCE MOTION
+========================================= */
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* =========================================
+   DARK MODE SCROLLBAR
+========================================= */
+
+html.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
